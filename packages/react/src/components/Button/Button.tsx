@@ -1,43 +1,55 @@
-import classNames from 'classnames';
-import React, { FC, ReactNode } from 'react';
-import './button.scss';
+import classNames from "classnames";
+import React, { FC, ReactNode } from "react";
+import "./button.scss";
+import Icons, { IconNames } from "../../../../../shared/icons/Icons";
 
 type ButtonProps = React.HTMLProps<HTMLButtonElement> & {
-    showRightIcon: boolean;
-    leftDivider: boolean;
-    rightDivider: boolean;
-    showLeftIcon: boolean;
-    childred: ReactNode;
-    type?: 'solid' | 'outline' | 'link';
-    variant?: 'primary' | 'secondary';
+  showRightIcon: boolean;
+  leftDivider: boolean;
+  rightDivider: boolean;
+  showLeftIcon: boolean;
+  leftIcon?: IconNames;
+  rightIcon?: IconNames;
+  children: ReactNode;
+  type?: "solid" | "outline" | "link";
+  variant?: "primary" | "secondary";
 };
 
 export const Button: FC<ButtonProps> = ({
-    childred,
-    showRightIcon = true,
-    leftDivider = true,
-    rightDivider = true,
-    showLeftIcon = true,
-    type = 'solid',
-    variant = 'primary',
-    ...rest
+  children,
+  showRightIcon = true,
+  leftDivider = true,
+  rightDivider = true,
+  showLeftIcon = true,
+  leftIcon,
+  rightIcon,
+  type = "solid",
+  variant = "primary",
+  ...rest
 }) => {
-    const buttonClass = classNames('button', {
-        [`${type}`]: type,
-        [`${variant}`]: variant,
-    });
+  const buttonClass = classNames("button", {
+    [`${type}`]: type,
+    [`${variant}`]: variant,
+  });
 
-    return (
-        <button className={buttonClass} {...rest}>
-            {showLeftIcon && <div className='left-icon' />}
+  const LeftIconComponent = leftIcon ? Icons[leftIcon] : null;
+  const RightIconComponent = rightIcon ? Icons[rightIcon] : null;
 
-            {leftDivider && <div className='divider' />}
+  return (
+    <button className={buttonClass} {...rest}>
+      {showLeftIcon && LeftIconComponent && (
+        <LeftIconComponent className="left-icon" />
+      )}
 
-            {childred}
+      {leftDivider && <div className="divider" />}
 
-            {rightDivider && <div className='divider' />}
+      {children}
 
-            {showRightIcon && <div className='right-icon' />}
-        </button>
-    );
+      {rightDivider && <div className="divider" />}
+
+      {showRightIcon && RightIconComponent && (
+        <RightIconComponent className="right-icon" />
+      )}
+    </button>
+  );
 };

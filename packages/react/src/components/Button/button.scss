@@ -1,53 +1,74 @@
-@import '../../styles/variables';
+@import "../../styles/variables";
 
 .button {
-    padding: 8px;
-    cursor: pointer;
-    border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    &.solid {
-        border: 1px solid;
+  &.solid {
+    border: 1px solid;
 
-        &.primary {
-            color: $primary-text;
-            background-color: $primary-bg;
-            border-color: $primary-text;
-        }
-
-        &.secondary {
-            color: $secondary-text;
-            background-color: $secondary-bg;
-            border-color: $secondary-text;
-        }
+    &.primary {
+      color: $primary-text;
+      background-color: $primary-bg;
+      border-color: $primary-text;
     }
 
-    &.outline {
-        border: 1px solid;
+    &.secondary {
+      color: $secondary-text;
+      background-color: $secondary-bg;
+      border-color: $secondary-text;
+    }
+  }
 
-        &.primary {
-            color: $primary-text;
-            background-color: white;
-            border-color: $primary-text;
-        }
+  &.outline {
+    border: 1px solid;
 
-        &.secondary {
-            color: $secondary-text;
-            background-color: white;
-            border-color: $secondary-text;
-        }
+    &.primary {
+      color: $primary-text;
+      background-color: white;
+      border-color: $primary-text;
     }
 
-    &.link {
-        border: none;
-
-        &.primary {
-            color: $primary-text;
-            background-color: transparent;
-        }
-
-        &.secondary {
-            color: $secondary-text;
-            background-color: transparent;
-        }
+    &.secondary {
+      color: $secondary-text;
+      background-color: white;
+      border-color: $secondary-text;
     }
+  }
+
+  &.link {
+    border: none;
+
+    &.primary {
+      color: $primary-text;
+      background-color: transparent;
+    }
+
+    &.secondary {
+      color: $secondary-text;
+      background-color: transparent;
+    }
+  }
+
+  .left-icon,
+  .right-icon {
+    display: flex;
+    align-items: center;
+  }
+
+  .left-icon {
+    margin-right: 8px;
+  }
+
+  .right-icon {
+    margin-left: 8px;
+  }
+
+  .divider {
+    margin: 0 8px;
+  }
 }
