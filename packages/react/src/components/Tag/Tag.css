@@ -1,0 +1,94 @@
+.tag {
+    align-items: center;
+    background-color: var(--bones-base-color-grey-100);
+    border: 1px solid;
+    border-color: #e5e7eb;
+    border-radius: var(--bones-base-spacing-space-2);
+    display: inline-flex;
+    gap: var(--bones-base-spacing-space-0);
+    padding: var(--bones-base-spacing-space-0) var(--bones-base-spacing-space-1) var(--bones-base-spacing-space-0)
+      var(--bones-base-spacing-space-1);
+    position: relative;
+  }
+  
+  .tag .base-avatar {
+    background-color: #afb8c1;
+    border: 1px solid;
+    border-color: #6e7781;
+    border-radius: 80px;
+    height: var(--bones-base-spacing-space-4);
+    position: relative;
+    width: var(--bones-base-spacing-space-4);
+  }
+  
+  .tag .face-wrapper {
+    align-items: center;
+    display: flex;
+    height: 11px;
+    justify-content: center;
+    left: 3px;
+    position: relative;
+    top: 3px;
+    width: 11px;
+  }
+  
+  .tag .face-instance {
+    align-self: stretch !important;
+    flex: 1 !important;
+    flex-grow: 1 !important;
+    position: relative !important;
+  }
+  
+  .tag .icon-instance-node {
+    height: 12px !important;
+    position: relative !important;
+    width: 12px !important;
+  }
+  
+  .tag .placeholder {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: var(--bones-base-spacing-space-1);
+    padding: 0px var(--bones-base-spacing-space-0) 0px var(--bones-base-spacing-space-0);
+    position: relative;
+  }
+  
+  .tag .status {
+    background-color: #6b7280;
+    border-radius: 999px;
+    height: 6px;
+    position: relative;
+    width: 6px;
+  }
+  
+  .tag .text-wrapper {
+    color: #6b7280;
+    font-family: var(--small-font-family);
+    font-size: var(--small-font-size);
+    font-style: var(--small-font-style);
+    font-weight: var(--small-font-weight);
+    letter-spacing: var(--small-letter-spacing);
+    line-height: var(--small-line-height);
+    margin-top: -1px;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .tag .close-icon {
+    align-items: center;
+    background-color: #d1d5db;
+    border-radius: 999px;
+    display: flex;
+    height: var(--bones-base-spacing-space-3);
+    justify-content: center;
+    position: relative;
+    width: var(--bones-base-spacing-space-3);
+  }
+  
+  .tag .close-instance {
+    height: 8px !important;
+    position: relative !important;
+    width: 8px !important;
+  }
+  

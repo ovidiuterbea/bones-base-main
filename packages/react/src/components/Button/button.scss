@@ -1,0 +1,53 @@
+@import '../../styles/variables';
+
+.button {
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+
+    &.solid {
+        border: 1px solid;
+
+        &.primary {
+            color: $primary-text;
+            background-color: $primary-bg;
+            border-color: $primary-text;
+        }
+
+        &.secondary {
+            color: $secondary-text;
+            background-color: $secondary-bg;
+            border-color: $secondary-text;
+        }
+    }
+
+    &.outline {
+        border: 1px solid;
+
+        &.primary {
+            color: $primary-text;
+            background-color: white;
+            border-color: $primary-text;
+        }
+
+        &.secondary {
+            color: $secondary-text;
+            background-color: white;
+            border-color: $secondary-text;
+        }
+    }
+
+    &.link {
+        border: none;
+
+        &.primary {
+            color: $primary-text;
+            background-color: transparent;
+        }
+
+        &.secondary {
+            color: $secondary-text;
+            background-color: transparent;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "codeConnect": {
+      "include": ["packages/react/src/components/**"],
+      "exclude": ["test/**", "docs/**", "build/**"],
+      "importPaths": {
+        "src/components/*": "@ui/components"
+      },
+      "paths": {
+        "@ui/components/*": ["packages/react/src/components/*"]
+      }
+    }
+  }
